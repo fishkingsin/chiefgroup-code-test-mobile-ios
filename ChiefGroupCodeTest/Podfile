@@ -1,0 +1,31 @@
+platform :ios, '15.0'
+
+target 'ChiefGroupCodeTest' do
+  use_frameworks!
+
+  # https://github.com/Alamofire/Alamofire
+  pod 'Alamofire'
+
+  # https://github.com/tristanhimmelman/ObjectMapper
+  pod 'ObjectMapper'
+
+  # https://github.com/realm/realm-cocoa
+  pod 'RealmSwift'
+
+  # https://github.com/ReactiveX/RxSwift
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+  # https://github.com/Juanpe/SkeletonView
+  pod 'SkeletonView'
+
+  target 'ChiefGroupCodeTestTests' do
+    inherit! :search_paths
+  end
+
+  target 'ChiefGroupCodeTestUITests' do
+    inherit! :search_paths
+    # https://github.com/uber/ios-snapshot-test-case/
+    pod 'iOSSnapshotTestCase'
+  end
+end
